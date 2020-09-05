@@ -1,7 +1,7 @@
 from telegram.ext import Updater
 from telegram.ext import CommandHandler ,MessageHandler, Filters
 
-updater = Updater('1338191387:AAED9G1bxTftvuQf3BGh7fqg4y971zwCDkQ', use_context = True)
+updater = Updater('توکن اینجااااا', use_context = True)
 
 
 def start(update, context):
