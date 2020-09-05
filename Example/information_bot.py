@@ -7,7 +7,7 @@ from telegram.ext import Updater
 from telegram.ext import CommandHandler, MessageHandler, Filters
 
 # Set token
-updater = Updater('1338191387:AAFezuyrd4-OwPnOJfmw3bEhHVy5zeHazRQ', use_context = True)
+updater = Updater('###YOur Token HERREEE !!!!', use_context = True)
 
 #Start Def
 def start(update, context):
