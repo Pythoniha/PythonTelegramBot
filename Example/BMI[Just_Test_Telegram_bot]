@@ -1,0 +1,26 @@
+from telegram.ext import Updater, CommandHandler, MessageHandler
+
+
+updater = Updater("Tokeeen .... TEST ", use_context=True)
+
+def start(bot, context):
+  context.bot.send_message(chat_id= bot.message.chat_id, text='Hello , How Are You Men')
+
+def bmi(bot, context):
+   context.bot.send_message(chat_id=bot.message.chat_id,text='به ربات محاسبه BMI خوش آمدید !')
+   context.bot.send_message(chat_id=bot.message.chat_id,text='قد ورزن خود را به صورت زیر وارد کنید \n /bmi1 100 70 \n عدد اول نشان دهند قد شماست و عدد دوم نشان دهنده ورزن شماست .')
+
+def bmi1(bot, context):
+   a = bot.message.text
+   ab = a.split(' ')
+   print(ab)
+   ghad, vazn = float(ab[1]), float(ab[2])
+   bmi = ((ghad**2)/vazn)
+   print(bmi)
+   context.bot.send_message(chat_id=bot.message.chat_id, text=bmi)
+
+updater.dispatcher.add_handler(CommandHandler('start', start))
+updater.dispatcher.add_handler(CommandHandler('bmi', bmi))
+updater.dispatcher.add_handler(CommandHandler('bmi1', bmi1))
+updater.start_polling()
+updater.idle(
